@@ -3,7 +3,7 @@
     <!-- 头部 -->
     <div class="wrapper">
       <div class="logo">
-        <img class="music_img" src="@/assets/up-logo.jpg" alt="" />
+        <!-- <img class="music_img" src="@/assets/up-logo.jpg" alt="" /> -->
       </div>
       <div class="user">
         <img src="@/assets/logo.png" alt="" />
@@ -121,23 +121,23 @@ export default {
         {
           id: 1,
           name: "中文歌",
-          audioUrl: "/audio/1.mp3",
+          audioUrl: "./audio/1.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "/lrc/中文歌.lrc"
+          lrcUrl: "./lrc/中文歌.lrc"
         },
         {
           id: 2,
           name: "英文歌",
-          audioUrl: "/audio/2.mp3",
+          audioUrl: "./audio/2.mp3",
           lang: "en",
           lyrics: [],
-          lrcUrl: "/lrc/英文歌.lrc"
+          lrcUrl: "./lrc/英文歌.lrc"
         },
         {
           id: 3,
           name: "日文歌",
-          audioUrl: "/audio/3.mp3",
+          audioUrl: "./audio/3.mp3",
           lang: "jp",
           lyrics: [],
           lrcUrl: ""
@@ -145,7 +145,7 @@ export default {
         {
           id: 4,
           name: "韩文歌",
-          audioUrl: "/audio/4.mp3",
+          audioUrl: "./audio/4.mp3",
           lang: "kr",
           lyrics: [],
           lrcUrl: ""
@@ -153,7 +153,7 @@ export default {
         {
           id: 5,
           name: "日文歌1",
-          audioUrl: "/audio/1.mp3",
+          audioUrl: "./audio/1.mp3",
           lang: "jp",
           lyrics: [],
           lrcUrl: ""
@@ -161,7 +161,7 @@ export default {
         {
           id: 6,
           name: "中文歌2",
-          audioUrl: "/audio/4.mp3",
+          audioUrl: "./audio/4.mp3",
           lang: "ch",
           lyrics: [],
           lrcUrl: ""
@@ -169,7 +169,7 @@ export default {
         {
           id: 7,
           name: "英文2",
-          audioUrl: "/audio/3.mp3",
+          audioUrl: "./audio/3.mp3",
           lang: "en",
           lyrics: [],
           lrcUrl: ""
@@ -177,7 +177,7 @@ export default {
         {
           id: 8,
           name: "韩文歌2",
-          audioUrl: "/audio/2.mp3",
+          audioUrl: "./audio/2.mp3",
           lang: "kr",
           lyrics: [],
           lrcUrl: ""
@@ -185,7 +185,7 @@ export default {
         {
           id: 9,
           name: "韩文歌2",
-          audioUrl: "/audio/2.mp3",
+          audioUrl: "./audio/2.mp3",
           lang: "kr",
           lyrics: [],
           lrcUrl: ""
@@ -193,51 +193,12 @@ export default {
         {
           id: 10,
           name: "韩文歌2",
-          audioUrl: "/audio/2.mp3",
+          audioUrl: "./audio/2.mp3",
           lang: "kr",
           lyrics: [],
           lrcUrl: ""
         },
-        {
-          id: 11,
-          name: "韩文歌2",
-          audioUrl: "/audio/2.mp3",
-          lang: "kr",
-          lyrics: [],
-          lrcUrl: ""
-        },
-        {
-          id: 12,
-          name: "韩文歌2",
-          audioUrl: "/audio/2.mp3",
-          lang: "kr",
-          lyrics: [],
-          lrcUrl: ""
-        },
-        {
-          id: 13,
-          name: "韩文歌2",
-          audioUrl: "/audio/2.mp3",
-          lang: "kr",
-          lyrics: [],
-          lrcUrl: ""
-        },
-        {
-          id: 14,
-          name: "韩文歌2",
-          audioUrl: "/audio/2.mp3",
-          lang: "kr",
-          lyrics: [],
-          lrcUrl: ""
-        },
-        {
-          id: 15,
-          name: "韩文歌2",
-          audioUrl: "/audio/2.mp3",
-          lang: "kr",
-          lyrics: [],
-          lrcUrl: ""
-        },
+  
       ],
       currentPlayingId: null, // 当前播放歌曲ID
       currentPlayingSong: null, // 当前播放歌曲对象

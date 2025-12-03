@@ -1,8 +1,8 @@
 // vue.config.js （纯前端专用版）
 module.exports = {
     // 🌟 核心：部署后静态资源路径（关键！适配public文件夹）
-    // publicPath: './', // 必须写'./'，否则部署后会找不到public里的音频/歌词/图片
-    publicPath: '/music-player/',
+    publicPath: './', // 必须写'./'，否则部署后会找不到public里的音频/歌词/图片
+
     // 打包输出目录（默认dist，不用改）
     outputDir: 'dist',
     // 静态资源子目录（public里的文件打包后会放到dist/static）
