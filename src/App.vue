@@ -130,6 +130,14 @@ export default {
           lyrics: [],
           lrcUrl: "./lrc/ch1.lrc"
         },
+        {
+          id: 3,
+          name: "看月亮爬上来",
+          audioUrl: "./audio/ch2.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch2.lrc"
+        },
         // {
         //   id: 2,
         //   name: "英文歌",
