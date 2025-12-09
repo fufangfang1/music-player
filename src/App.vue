@@ -117,19 +117,19 @@ export default {
            {
           id: 1,
           name: "ディスコネクトディスコ",
-          audioUrl: "./audio/ディスコネクトディスコ.mp3",
+          audioUrl: "./audio/jp1.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/ディスコネクトディスコ.lrc"
+          lrcUrl: "./lrc/jp1.lrc"
         },
-        // {
-        //   id: 1,
-        //   name: "中文歌",
-        //   audioUrl: "./audio/1.mp3",
-        //   lang: "ch",
-        //   lyrics: [],
-        //   lrcUrl: "./lrc/中文歌.lrc"
-        // },
+        {
+          id: 2,
+          name: "1022-比尔的歌",
+          audioUrl: "./audio/ch1.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch1.lrc"
+        },
         // {
         //   id: 2,
         //   name: "英文歌",
