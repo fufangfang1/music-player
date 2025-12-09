@@ -2,12 +2,14 @@
   <div id="app">
     <!-- 头部 -->
     <div class="wrapper">
-      <div class="logo">
-        <!-- <img class="music_img" src="@/assets/up-logo.jpg" alt="" /> -->
+       <div class="user">
+        <img src="@/assets/avator.jpg" alt="" />
       </div>
-      <div class="user">
-        <img src="@/assets/logo.png" alt="" />
+     
+        <div class="logo">
+        <img class="music_img" src="@/assets/up-logo.png" alt="" />
       </div>
+    
     </div>
 
     <!-- 主体卡片 -->
@@ -30,7 +32,7 @@
         <div class="music_list">
           <!-- 空列表提示 -->
           <div v-if="filteredSongs.length == 0" class="empty-tip">
-            当前分类暂无歌曲
+            現在のカテゴリーに曲がありません
           </div>
           <!-- 歌曲项：仅保留播放图标，无audio控件 -->
           <div
@@ -64,7 +66,7 @@
             />
           </div>
         </div>
-        <!-- 播放列表全部按钮 -->
+        <!-- プレイリスト全て按钮 -->
         <div class="cus-btn" @click="togglePlayAllList">
           {{ playAllBtnText }}
         </div>
@@ -75,7 +77,7 @@
     <el-dialog
       ref="lyricDialog"
       :visible.sync="lyricDialogVisible"
-      title="歌词"
+      title="歌詞"
       top="10vh"
       :close-on-click-modal="false"
       class="lyric-dialog"
@@ -91,12 +93,6 @@
           >
             {{ lyric.text }}
           </p>
-<!-- <p>故事的小黄花</p>
-<p>从出生那年就飘着</p>
-<p class="active-lyric">sou la xi xi xi xi la xi la sou sou la xi xi xi xi la xi la sou</p>
-<p>随记忆一直晃到现在</p>
-<p>rui sou sou xi dou xi la</p> -->
-
         </div>
       </el-scrollbar>
     </el-dialog>
@@ -109,95 +105,103 @@ export default {
     return {
       // 分类列表
       typeMusicList: [
-        { name: "全部", lang: "" },
-        { name: "日语", lang: "jp" },
-        { name: "汉语", lang: "ch" },
-        { name: "英语", lang: "en" },
-        { name: "韩语", lang: "kr" },
+        { name: "全て", lang: "" },
+        { name: "日本語", lang: "jp" },
+        { name: "中国語", lang: "ch" },
+        { name: "英語", lang: "en" },
+        { name: "韓国語", lang: "kr" },
       ],
       activeTypeIndex: 0,
       // 音频路径（public/audio目录）+ 歌词路径
       songList: [
-        {
+           {
           id: 1,
-          name: "中文歌",
-          audioUrl: "./audio/1.mp3",
-          lang: "ch",
-          lyrics: [],
-          lrcUrl: "./lrc/中文歌.lrc"
-        },
-        {
-          id: 2,
-          name: "英文歌",
-          audioUrl: "./audio/2.mp3",
-          lang: "en",
-          lyrics: [],
-          lrcUrl: "./lrc/英文歌.lrc"
-        },
-        {
-          id: 3,
-          name: "日文歌",
-          audioUrl: "./audio/3.mp3",
+          name: "ディスコネクトディスコ",
+          audioUrl: "./audio/ディスコネクトディスコ.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: ""
+          lrcUrl: "./lrc/ディスコネクトディスコ.lrc"
         },
-        {
-          id: 4,
-          name: "韩文歌",
-          audioUrl: "./audio/4.mp3",
-          lang: "kr",
-          lyrics: [],
-          lrcUrl: ""
-        },
-        {
-          id: 5,
-          name: "日文歌1",
-          audioUrl: "./audio/1.mp3",
-          lang: "jp",
-          lyrics: [],
-          lrcUrl: ""
-        },
-        {
-          id: 6,
-          name: "中文歌2",
-          audioUrl: "./audio/4.mp3",
-          lang: "ch",
-          lyrics: [],
-          lrcUrl: ""
-        },
-        {
-          id: 7,
-          name: "英文2",
-          audioUrl: "./audio/3.mp3",
-          lang: "en",
-          lyrics: [],
-          lrcUrl: ""
-        },
-        {
-          id: 8,
-          name: "韩文歌2",
-          audioUrl: "./audio/2.mp3",
-          lang: "kr",
-          lyrics: [],
-          lrcUrl: ""
-        },
-        {
-          id: 9,
-          name: "韩文歌2",
-          audioUrl: "./audio/2.mp3",
-          lang: "kr",
-          lyrics: [],
-          lrcUrl: ""
-        },
-        {
-          id: 10,
-          name: "韩文歌2",
-          audioUrl: "./audio/2.mp3",
-          lang: "kr",
-          lyrics: [],
-          lrcUrl: ""
-        },
+        // {
+        //   id: 1,
+        //   name: "中文歌",
+        //   audioUrl: "./audio/1.mp3",
+        //   lang: "ch",
+        //   lyrics: [],
+        //   lrcUrl: "./lrc/中文歌.lrc"
+        // },
+        // {
+        //   id: 2,
+        //   name: "英文歌",
+        //   audioUrl: "./audio/2.mp3",
+        //   lang: "en",
+        //   lyrics: [],
+        //   lrcUrl: "./lrc/英文歌.lrc"
+        // },
+        // {
+        //   id: 3,
+        //   name: "日文歌",
+        //   audioUrl: "./audio/3.mp3",
+        //   lang: "jp",
+        //   lyrics: [],
+        //   lrcUrl: ""
+        // },
+        // {
+        //   id: 4,
+        //   name: "韩文歌",
+        //   audioUrl: "./audio/4.mp3",
+        //   lang: "kr",
+        //   lyrics: [],
+        //   lrcUrl: ""
+        // },
+        // {
+        //   id: 5,
+        //   name: "日文歌1",
+        //   audioUrl: "./audio/1.mp3",
+        //   lang: "jp",
+        //   lyrics: [],
+        //   lrcUrl: ""
+        // },
+        // {
+        //   id: 6,
+        //   name: "中文歌2",
+        //   audioUrl: "./audio/4.mp3",
+        //   lang: "ch",
+        //   lyrics: [],
+        //   lrcUrl: ""
+        // },
+        // {
+        //   id: 7,
+        //   name: "英文2",
+        //   audioUrl: "./audio/3.mp3",
+        //   lang: "en",
+        //   lyrics: [],
+        //   lrcUrl: ""
+        // },
+        // {
+        //   id: 8,
+        //   name: "韩文歌2",
+        //   audioUrl: "./audio/2.mp3",
+        //   lang: "kr",
+        //   lyrics: [],
+        //   lrcUrl: ""
+        // },
+        // {
+        //   id: 9,
+        //   name: "韩文歌2",
+        //   audioUrl: "./audio/2.mp3",
+        //   lang: "kr",
+        //   lyrics: [],
+        //   lrcUrl: ""
+        // },
+        // {
+        //   id: 10,
+        //   name: "韩文歌2",
+        //   audioUrl: "./audio/2.mp3",
+        //   lang: "kr",
+        //   lyrics: [],
+        //   lrcUrl: ""
+        // },
   
       ],
       currentPlayingId: null, // 当前播放歌曲ID
@@ -207,11 +211,11 @@ export default {
       currentTime: 0, // 当前播放时间
       duration: 0, // 音频总时长
       playMode: "list", // 播放模式：list=列表，single=单曲
-      playAllBtnText: "播放列表全部", // 按钮文字
+      playAllBtnText: "プレイリスト全て", // 按钮文字
       audio: null, // 纯JS创建的音频对象（不渲染到页面）
       audioErrorHandler: null, // 错误监听缓存
       currentLyricIndex: -1, // 当前高亮歌词索引
-      lyricDialogVisible: true // 歌词弹窗显示状态
+      lyricDialogVisible: false // 歌词弹窗显示状态
     };
   },
   mounted() {
@@ -246,24 +250,36 @@ export default {
   },
   methods: {
     // 解析LRC歌词（过滤注释行，只保留时间戳行）
-    parseLrc(lrcText) {
-      if (!lrcText) return [];
-      const lines = lrcText.split('\n').filter(line => line.trim() && line.startsWith('[00:'));
-      const lrcRegex = /\[(\d{2}):(\d{2})\.(\d{2,3})\]\s*(.+)/g;
-      const lyrics = [];
-      lines.forEach(line => {
-        const match = lrcRegex.exec(line);
-        if (match) {
-          const [, min, sec, ms, text] = match;
-          const time = Number(min) * 60 + Number(sec) + Number(ms) / 1000;
-          if (text.trim()) {
-            lyrics.push({ time, text: text.trim() });
-          }
-        }
-      });
-      console.log("解析后的歌词：", lyrics);
-      return lyrics;
-    },
+// 解析LRC歌词（过滤注释行，只保留时间戳行）
+parseLrc(lrcText) {
+  if (!lrcText) return [];
+  // 1. 优化行过滤：trim后非空 + 匹配[MM:SS格式（不再限制00开头）
+  const lines = lrcText.split('\n')
+    .map(line => line.trim()) // 统一trim，避免换行/空格干扰
+    .filter(line => line && /^\[\d{2}:\d{2}/.test(line)); // 匹配[两位数字:两位数字开头
+  
+  // 2. 移除/g全局修饰符，避免lastIndex累积问题
+  const lrcRegex = /\[(\d{2}):(\d{2})\.(\d{2,3})\]\s*(.+)/;
+  const lyrics = [];
+  
+  lines.forEach(line => {
+    // 3. 每次匹配前重置正则lastIndex（双重保险，移除/g后可省略，但保留更健壮）
+    lrcRegex.lastIndex = 0;
+    const match = lrcRegex.exec(line);
+    if (match) {
+      const [, min, sec, ms, text] = match;
+      // 4. 时间计算优化：统一处理2/3位毫秒
+      const msNum = ms.length === 2 ? Number(ms) * 10 : Number(ms);
+      const time = Number(min) * 60 + Number(sec) + msNum / 1000;
+      // 5. 允许text含空格，仅过滤纯空
+      if (text.trim().length > 0) {
+        lyrics.push({ time, text: text.trim() });
+      }
+    }
+  });
+  console.log("解析后的完整歌词：", lyrics);
+  return lyrics;
+},
     // 加载歌词文件
     loadLrc(song) {
       if (!song.lrcUrl) return Promise.resolve([]);
@@ -282,13 +298,13 @@ export default {
     changeType(index) {
       this.activeTypeIndex = index;
       this.stopAllPlay(); // 停止当前播放
-      this.playAllBtnText = "播放列表全部";
+      this.playAllBtnText = "プレイリスト全て";
     },
-    // 播放/暂停列表全部
+    // 播放/一時停止リスト全て
     togglePlayAllList() {
       const list = this.filteredSongs;
       if (list.length === 0) {
-        this.$message.warning("当前分类暂无歌曲！");
+        this.$message.warning("現在のカテゴリーに曲がありません！");
         return;
       }
 
@@ -296,12 +312,12 @@ export default {
         // 暂停列表播放
         this.audio.pause();
         this.isPlaying = false;
-        this.playAllBtnText = "播放列表全部";
+        this.playAllBtnText = "プレイリスト全て";
       } else {
         // 播放列表第一首
         this.playMode = "list";
         this.playSong(list[0], 0);
-        this.playAllBtnText = "暂停列表全部";
+        this.playAllBtnText = "一時停止リスト全て";
       }
     },
     // 播放指定歌曲（核心：纯JS音频对象播放，无DOM标签）
@@ -346,7 +362,7 @@ export default {
           this.audio.play()
             .then(() => {
               this.isPlaying = true;
-              this.playAllBtnText = this.playMode === "list" ? "暂停列表全部" : "播放列表全部";
+              this.playAllBtnText = this.playMode === "list" ? "一時停止リスト全て" : "プレイリスト全て";
               console.log(`《${song.name}》开始播放，时长：${this.formatTime(this.duration)}`);
             })
             .catch((err) => {
@@ -376,12 +392,12 @@ export default {
       if (this.isPlaying) {
         this.audio.pause();
         this.isPlaying = false;
-        this.playAllBtnText = this.playMode === "list" ? "播放列表全部" : "播放列表全部";
+        this.playAllBtnText = this.playMode === "list" ? "プレイリスト全て" : "プレイリスト全て";
       } else {
         this.audio.play()
           .then(() => {
             this.isPlaying = true;
-            this.playAllBtnText = this.playMode === "list" ? "暂停列表全部" : "播放列表全部";
+            this.playAllBtnText = this.playMode === "list" ? "一時停止リスト全て" : "プレイリスト全て";
           })
           .catch(err => {
             this.$message.error(`恢复播放失败：${err.message}`);
@@ -389,43 +405,37 @@ export default {
       }
     },
     // 播放进度更新（核心：匹配歌词+滚动）
-    handleTimeUpdate() {
-      if (!this.isPlaying || !this.currentPlayingSong) return;
-      
-      // 实时更新播放时间
-      this.currentTime = this.audio.currentTime;
-      
-      // 匹配当前歌词
-      const lyrics = this.currentPlayingSong.lyrics || [];
-      if (lyrics.length === 0) return;
+  // 播放进度更新中，滚动逻辑优化（避免滚动偏移错误）
+handleTimeUpdate() {
+  if (!this.isPlaying || !this.currentPlayingSong) return;
+  
+  this.currentTime = this.audio.currentTime;
+  const lyrics = this.currentPlayingSong.lyrics || [];
+  if (lyrics.length === 0) return;
 
-      let currentIndex = -1;
-      const currentTime = this.currentTime;
-      // 遍历歌词，找到当前时间对应的行
-      for (let i = 0; i < lyrics.length; i++) {
-        const lyricTime = lyrics[i].time;
-        const nextLyricTime = i < lyrics.length - 1 ? lyrics[i + 1].time : Infinity;
-        // 时间匹配（允许0.2秒偏差）
-        if (currentTime >= lyricTime - 0.2 && currentTime < nextLyricTime) {
-          currentIndex = i;
-          break;
-        }
-      }
+  let currentIndex = -1;
+  const currentTime = this.currentTime;
+  // 优化歌词匹配逻辑：从后往前找，避免多匹配
+  for (let i = lyrics.length - 1; i >= 0; i--) {
+    if (currentTime >= lyrics[i].time - 0.1) { // 缩小偏差值，匹配更精准
+      currentIndex = i;
+      break;
+    }
+  }
 
-      // 索引变化时，更新高亮+滚动
-      if (currentIndex !== -1 && currentIndex !== this.currentLyricIndex) {
-        this.currentLyricIndex = currentIndex;
-        this.$nextTick(() => {
-          const lyricDom = this.$refs[`lyric_${currentIndex}`]?.[0];
-          const scrollContainer = this.$refs.lyricScroll?.wrap || lyricDom?.parentElement;
-          if (lyricDom && scrollContainer) {
-            // 歌词居中滚动
-            const targetTop = lyricDom.offsetTop - (scrollContainer.clientHeight / 2) + (lyricDom.offsetHeight / 2);
-            scrollContainer.scrollTo({ top: targetTop, behavior: 'smooth' });
-          }
-        });
+  if (currentIndex !== -1 && currentIndex !== this.currentLyricIndex) {
+    this.currentLyricIndex = currentIndex;
+    this.$nextTick(() => {
+      const lyricDom = this.$refs[`lyric_${currentIndex}`]?.[0];
+      const scrollContainer = this.$refs.lyricScroll?.wrap;
+      if (lyricDom && scrollContainer) {
+        // 滚动优化：使用scrollTop而非scrollTo，避免smooth导致的卡顿
+        const targetTop = lyricDom.offsetTop - (scrollContainer.clientHeight / 2) + (lyricDom.offsetHeight / 2);
+        scrollContainer.scrollTop = Math.max(0, targetTop);
       }
-    },
+    });
+  }
+},
     // 播放结束处理（列表循环/单曲停止）
     handlePlayEnd() {
       this.isPlaying = false;
@@ -438,7 +448,7 @@ export default {
       } else {
         // 单曲模式：停止播放
         this.stopAllPlay();
-        this.playAllBtnText = "播放列表全部";
+        this.playAllBtnText = "プレイリスト全て";
       }
     },
     // 停止所有播放
@@ -681,6 +691,7 @@ body {
 
 .wrapper {
   position: absolute;
+  padding: 0 10px;
   width: 100%;
   height: 70px;
   display: flex;
@@ -689,16 +700,22 @@ body {
   background-color: rgba(23, 25, 34, 0.2);
 }
 .logo {
-  margin-left: 30px;
-  width: 60px;
-  height: 60px;
+  /* margin-left: 30px; */
+      display: flex;
+    align-items: center;
+  width: 50px;
+  height: 50px;
 }
 .user {
-  margin-right: 30px;
+  /* margin-right: 30px; */
   width: 50px;
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
+  /* 核心：圆形渐变边框 */
+  border: 2px solid transparent;
+  background:linear-gradient(135deg, #1467ff, #c2baf0, #9610f5) border-box,
+            #fff padding-box
 }
 .user img {
   width: 100%;
