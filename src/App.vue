@@ -138,14 +138,38 @@ export default {
           lyrics: [],
           lrcUrl: "./lrc/ch2.lrc"
         },
-        // {
-        //   id: 2,
-        //   name: "英文歌",
-        //   audioUrl: "./audio/2.mp3",
-        //   lang: "en",
-        //   lyrics: [],
-        //   lrcUrl: "./lrc/英文歌.lrc"
-        // },
+        {
+          id: 4,
+          name: "深夜6時",
+          audioUrl: "./audio/jp2.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp2.lrc"
+        },
+        {
+          id: 5,
+          name: "ラストハンチ",
+          audioUrl: "./audio/jp3.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp3.lrc"
+        },
+         {
+          id: 6,
+          name: "达尔文",
+          audioUrl: "./audio/ch3.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch3.lrc"
+        },
+          {
+          id: 7,
+          name: "lovestepを踏みたいの",
+          audioUrl: "./audio/jp4.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp4.lrc"
+        },
         // {
         //   id: 3,
         //   name: "日文歌",
