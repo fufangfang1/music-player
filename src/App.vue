@@ -83,16 +83,25 @@
       class="lyric-dialog"
       :append-to-body="true"
     >
-      <el-scrollbar ref="lyricScroll" style="height: 400px; width: 100%;">
+      <el-scrollbar ref="lyricScroll" style="height: 450px; width: 100%;">
         <div class="lyrics-container">
-          <p 
+          <!-- <p 
             v-for="(lyric, i) in currentPlayingSong?.lyrics || []"
             :key="i"
             :class="{ 'active-lyric': currentLyricIndex === i }"
             :ref="`lyric_${i}`"
           >
             {{ lyric.text }}
-          </p>
+           
+          </p> -->
+<p>気になってしまったこれがtrigger</p>
+<p>止まることないI need you</p>
+<p>苛立った日でも君を見れば脳内happy day</p>
+<p>でもね愛、愛、会い足りないから</p>
+<p>Bye、Bay なんてしたくはないよ</p>
+<p>こんなふうに想えたのは君だけ</p>
+<p >一切合切本音で愛をぶつけるから受け取って</p>
+<p class="active-lyric">世界中で1人だけ僕は君だけを愛してる</p>
         </div>
       </el-scrollbar>
     </el-dialog>
@@ -169,6 +178,46 @@ export default {
           lang: "jp",
           lyrics: [],
           lrcUrl: "./lrc/jp4.lrc"
+        },
+         {
+          id: 8,
+          name: "极昼",
+          audioUrl: "./audio/ch4.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch4.lrc"
+        },
+         {
+          id: 9,
+          name: "マジか",
+          audioUrl: "./audio/jp5.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp5.lrc"
+        },
+         {
+          id: 10,
+          name: "WINDSDAY",
+          audioUrl: "./audio/jp6.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp6.lrc"
+        },
+         {
+          id: 11,
+          name: "一切合切",
+          audioUrl: "./audio/jp7.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp7.lrc"
+        },
+         {
+          id: 12,
+          name: "红苹果",
+          audioUrl: "./audio/ch5.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch5.lrc"
         },
         // {
         //   id: 3,
@@ -247,7 +296,7 @@ export default {
       audio: null, // 纯JS创建的音频对象（不渲染到页面）
       audioErrorHandler: null, // 错误监听缓存
       currentLyricIndex: -1, // 当前高亮歌词索引
-      lyricDialogVisible: false // 歌词弹窗显示状态
+      lyricDialogVisible: true // 歌词弹窗显示状态
     };
   },
   mounted() {
@@ -616,7 +665,9 @@ body {
 .lyric-dialog .lyrics-container {
   text-align: center;
   /* padding: 5px; */
-  min-height: 380px;
+  /* min-height: 380px; */
+  height: auto;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -641,32 +692,44 @@ body {
   transform: scale(1.05);
 }
 
-.lyric-dialog .el-scrollbar__wrap {
+.lyric-dialog .el-dialog__body .el-scrollbar__wrap {
   background-color: #0c0e14;
-  overflow: hidden !important;
+  overflow: auto !important;
+  /* 隐藏滚动条，但是页面可以滚动 */
+    /* 适配Firefox */
+  scrollbar-width: none;
+  /* 适配IE/旧版Edge */
+  -ms-overflow-style: none;
     /* 火狐滚动条兼容 */
-  scrollbar-width: thin;
-  scrollbar-color: #1467ff transparent;
+  /* scrollbar-width: thin;
+  scrollbar-color: #1467ff transparent; */
+}
+/* 适配Chrome/Safari/新版Edge等WebKit内核浏览器 */
+.lyric-dialog .el-scrollbar__wrap::-webkit-scrollbar {
+  display: none; /* 彻底隐藏滚动条 */
 }
 /* 歌词弹窗滚动条（核心优化：调细+位置+圆角） */
-.lyric-dialog .el-scrollbar__bar.is-vertical {
+/* .lyric-dialog .el-scrollbar__bar.is-vertical {
   display: none;
   width: 4px; 
   right: 2px ;
-  opacity: 0.7; /* 初始半透明，hover更明显 */
+  opacity: 0.7; 
   transition: opacity 0.2s ease;
-}
-.lyric-dialog .el-scrollbar__bar.is-vertical:hover {
+} */
+/* .lyric-dialog .el-scrollbar__bar.is-vertical:hover {
+  display: none;
   opacity: 1;
 }
 .lyric-dialog .el-scrollbar__thumb {
+  display: none;
   background-color: #1467ff ;
   border-radius: 4px;
     height: 4px !important; 
-}
+} */
 .lyric-dialog{
     scrollbar-width: thin;
       scrollbar-color:#1467ff
+      
 }
 
 
