@@ -85,7 +85,7 @@
     >
       <el-scrollbar ref="lyricScroll" style="height: 450px; width: 100%;">
         <div class="lyrics-container">
-          <!-- <p 
+          <p 
             v-for="(lyric, i) in currentPlayingSong?.lyrics || []"
             :key="i"
             :class="{ 'active-lyric': currentLyricIndex === i }"
@@ -93,15 +93,15 @@
           >
             {{ lyric.text }}
            
-          </p> -->
-<p>気になってしまったこれがtrigger</p>
+          </p>
+<!-- <p>気になってしまったこれがtrigger</p>
 <p>止まることないI need you</p>
 <p>苛立った日でも君を見れば脳内happy day</p>
 <p>でもね愛、愛、会い足りないから</p>
 <p>Bye、Bay なんてしたくはないよ</p>
 <p>こんなふうに想えたのは君だけ</p>
 <p >一切合切本音で愛をぶつけるから受け取って</p>
-<p class="active-lyric">世界中で1人だけ僕は君だけを愛してる</p>
+<p class="active-lyric">世界中で1人だけ僕は君だけを愛してる</p> -->
         </div>
       </el-scrollbar>
     </el-dialog>
@@ -296,7 +296,7 @@ export default {
       audio: null, // 纯JS创建的音频对象（不渲染到页面）
       audioErrorHandler: null, // 错误监听缓存
       currentLyricIndex: -1, // 当前高亮歌词索引
-      lyricDialogVisible: true // 歌词弹窗显示状态
+      lyricDialogVisible: false // 歌词弹窗显示状态
     };
   },
   mounted() {
