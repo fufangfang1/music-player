@@ -219,6 +219,22 @@ export default {
           lyrics: [],
           lrcUrl: "./lrc/ch5.lrc"
         },
+        {
+          id: 13,
+          name: "坏情绪",
+          audioUrl: "./audio/ch6.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch6.lrc"
+        },
+        {
+          id: 14,
+          name: "渇愛エチュード",
+          audioUrl: "./audio/jp8.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp8.lrc"
+        },
         // {
         //   id: 3,
         //   name: "日文歌",
@@ -664,7 +680,7 @@ body {
 
 .lyric-dialog .lyrics-container {
   text-align: center;
-  /* padding: 5px; */
+  padding: 5px;
   /* min-height: 380px; */
   height: auto;
   overflow: auto;
@@ -695,6 +711,8 @@ body {
 .lyric-dialog .el-dialog__body .el-scrollbar__wrap {
   background-color: #0c0e14;
   overflow: auto !important;
+  /* margin-right: -9px; */
+  /* padding-right: 9px; */
   /* 隐藏滚动条，但是页面可以滚动 */
     /* 适配Firefox */
   scrollbar-width: none;
