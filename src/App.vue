@@ -235,6 +235,38 @@ export default {
           lyrics: [],
           lrcUrl: "./lrc/jp8.lrc"
         },
+         {
+          id: 15,
+          name: "迁就",
+          audioUrl: "./audio/ch7.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch7.lrc"
+        },
+         {
+          id: 16,
+          name: "小城",
+          audioUrl: "./audio/ch8.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch8.lrc"
+        },
+        {
+          id: 17,
+          name: "ヘンゼルとグレーテル",
+          audioUrl: "./audio/jp9.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp9.lrc"
+        },
+        {
+          id: 18,
+          name: "徘徊",
+          audioUrl: "./audio/jp10.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp10.lrc"
+        },
         // {
         //   id: 3,
         //   name: "日文歌",
