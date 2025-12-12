@@ -348,6 +348,30 @@ export default {
           lyrics: [],
           lrcUrl: "./lrc/jp16.lrc"
         },
+         {
+          id: 29,
+          name: "Butter-fly",
+          audioUrl: "./audio/jp17.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp17.lrc"
+        },
+         {
+          id: 30,
+          name: "认真的雪",
+          audioUrl: "./audio/ch13.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch13.lrc"
+        },
+         {
+          id: 31,
+          name: "永不失联的爱",
+          audioUrl: "./audio/ch14.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch14.lrc"
+        },
   
       ],
       currentPlayingId: null, // 当前播放歌曲ID
