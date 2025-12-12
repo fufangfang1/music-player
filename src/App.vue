@@ -267,6 +267,46 @@ export default {
           lyrics: [],
           lrcUrl: "./lrc/jp10.lrc"
         },
+        {
+          id: 19,
+          name: "バカね",
+          audioUrl: "./audio/jp11.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp11.lrc"
+        },
+         {
+          id: 20,
+          name: "天生一对",
+          audioUrl: "./audio/ch9.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch9.lrc"
+        },
+         {
+          id: 21,
+          name: "ベルガモット",
+          audioUrl: "./audio/jp12.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp12.lrc"
+        },
+         {
+          id: 22,
+          name: "大师球",
+          audioUrl: "./audio/ch10.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch10.lrc"
+        },
+         {
+          id: 23,
+          name: "愿",
+          audioUrl: "./audio/ch11.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch11.lrc"
+        },
         // {
         //   id: 3,
         //   name: "日文歌",
