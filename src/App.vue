@@ -283,7 +283,7 @@ export default {
           lyrics: [],
           lrcUrl: "./lrc/ch9.lrc"
         },
-         {
+        {
           id: 21,
           name: "ベルガモット",
           audioUrl: "./audio/jp12.mp3",
@@ -307,70 +307,47 @@ export default {
           lyrics: [],
           lrcUrl: "./lrc/ch11.lrc"
         },
-        // {
-        //   id: 3,
-        //   name: "日文歌",
-        //   audioUrl: "./audio/3.mp3",
-        //   lang: "jp",
-        //   lyrics: [],
-        //   lrcUrl: ""
-        // },
-        // {
-        //   id: 4,
-        //   name: "韩文歌",
-        //   audioUrl: "./audio/4.mp3",
-        //   lang: "kr",
-        //   lyrics: [],
-        //   lrcUrl: ""
-        // },
-        // {
-        //   id: 5,
-        //   name: "日文歌1",
-        //   audioUrl: "./audio/1.mp3",
-        //   lang: "jp",
-        //   lyrics: [],
-        //   lrcUrl: ""
-        // },
-        // {
-        //   id: 6,
-        //   name: "中文歌2",
-        //   audioUrl: "./audio/4.mp3",
-        //   lang: "ch",
-        //   lyrics: [],
-        //   lrcUrl: ""
-        // },
-        // {
-        //   id: 7,
-        //   name: "英文2",
-        //   audioUrl: "./audio/3.mp3",
-        //   lang: "en",
-        //   lyrics: [],
-        //   lrcUrl: ""
-        // },
-        // {
-        //   id: 8,
-        //   name: "韩文歌2",
-        //   audioUrl: "./audio/2.mp3",
-        //   lang: "kr",
-        //   lyrics: [],
-        //   lrcUrl: ""
-        // },
-        // {
-        //   id: 9,
-        //   name: "韩文歌2",
-        //   audioUrl: "./audio/2.mp3",
-        //   lang: "kr",
-        //   lyrics: [],
-        //   lrcUrl: ""
-        // },
-        // {
-        //   id: 10,
-        //   name: "韩文歌2",
-        //   audioUrl: "./audio/2.mp3",
-        //   lang: "kr",
-        //   lyrics: [],
-        //   lrcUrl: ""
-        // },
+         {
+          id: 24,
+          name: "Drops",
+          audioUrl: "./audio/jp13.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp13.lrc"
+        },
+         {
+          id: 25,
+          name: "ムーンライト",
+          audioUrl: "./audio/jp14.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp14.lrc"
+        },
+        
+        {
+          id: 26,
+          name: "消炎",
+          audioUrl: "./audio/ch12.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch12.lrc"
+        },
+         {
+          id: 27,
+          name: "まつり",
+          audioUrl: "./audio/jp15.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp15.lrc"
+        },
+         {
+          id: 28,
+          name: "愛の賞味期限",
+          audioUrl: "./audio/jp16.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "./lrc/jp16.lrc"
+        },
   
       ],
       currentPlayingId: null, // 当前播放歌曲ID
