@@ -372,6 +372,46 @@ export default {
           lyrics: [],
           lrcUrl: "./lrc/ch14.lrc"
         },
+         {
+          id: 32,
+          name: "이 유",
+          audioUrl: "./audio/kr1.mp3",
+          lang: "kr",
+          lyrics: [],
+          lrcUrl: "./lrc/kr1.lrc"
+        },
+         {
+          id: 33,
+          name: "The Beginning",
+          audioUrl: "./audio/en1.mp3",
+          lang: "en",
+          lyrics: [],
+          lrcUrl: "./lrc/en1.lrc"
+        },
+         {
+          id: 34,
+          name: "Seven(feat.Latto)",
+          audioUrl: "./audio/en2.mp3",
+          lang: "en",
+          lyrics: [],
+          lrcUrl: "./lrc/en2.lrc"
+        },
+         {
+          id: 35,
+          name: "Betcha",
+          audioUrl: "./audio/kr2.mp3",
+          lang: "kr",
+          lyrics: [],
+          lrcUrl: "./lrc/kr2.lrc"
+        },
+         {
+          id: 36,
+          name: "爱在西元前",
+          audioUrl: "./audio/ch15.mp3",
+          lang: "ch",
+          lyrics: [],
+          lrcUrl: "./lrc/ch15.lrc"
+        },
   
       ],
       currentPlayingId: null, // 当前播放歌曲ID
