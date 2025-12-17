@@ -2,13 +2,14 @@
   <div id="app">
     <!-- 头部 -->
     <div class="wrapper">
+       <div class="logo">
+        <img class="music_img" src="@/assets/up-logo.png" alt="" />
+      </div>
        <div class="user">
         <img src="@/assets/avator.jpg" alt="" />
       </div>
      
-        <div class="logo">
-        <img class="music_img" src="@/assets/up-logo.png" alt="" />
-      </div>
+       
     
     </div>
 
@@ -94,14 +95,6 @@
             {{ lyric.text }}
            
           </p>
-<!-- <p>気になってしまったこれがtrigger</p>
-<p>止まることないI need you</p>
-<p>苛立った日でも君を見れば脳内happy day</p>
-<p>でもね愛、愛、会い足りないから</p>
-<p>Bye、Bay なんてしたくはないよ</p>
-<p>こんなふうに想えたのは君だけ</p>
-<p >一切合切本音で愛をぶつけるから受け取って</p>
-<p class="active-lyric">世界中で1人だけ僕は君だけを愛してる</p> -->
         </div>
       </el-scrollbar>
     </el-dialog>
@@ -893,6 +886,7 @@ body {
 }
 .music_content {
   display: flex;
+  gap: 5px;
 }
 .music_name {
   background-image: url("~@/assets/text-boder-bg.png");
@@ -912,6 +906,7 @@ body {
 }
 .music_name.active {
   color: rgb(32, 175, 231);
+  /* color: #1467ff; */
   font-weight: 600;
 }
 
@@ -940,7 +935,7 @@ body {
   overflow: hidden;
   /* 核心：圆形渐变边框 */
   border: 2px solid transparent;
-  background:linear-gradient(135deg, #1467ff, #c2baf0, #9610f5) border-box,
+  background:linear-gradient(135deg, #1467ff, #b0a4e6, #9610f5) border-box,
             #fff padding-box
 }
 .user img {
@@ -1007,7 +1002,8 @@ body {
   width: 80%;
   height: 34px;
   margin: auto;
-  background: linear-gradient(180deg, #38e5ff, #3e6ade);
+  background: linear-gradient(180deg, #38e5ff, #1476ff);
+
   border-radius: 21px;
   font-weight: 500;
   display: flex;
@@ -1086,9 +1082,6 @@ body {
   .song-item {
     padding: 10px !important;
   }
-  /* .lyric-dialog {
-    width: 90% !important;
-  } */
   .lyric-dialog .lyrics-container p {
     font-size: 14px;
   }
