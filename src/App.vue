@@ -871,9 +871,9 @@ body {
   margin: 0 auto !important;
 }
 .title_img {
-  width: 73%;
+  width: 58%;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 /* ========== 移动端覆盖（全局媒体查询，优先级最高） ========== */
@@ -887,9 +887,9 @@ body {
     padding: 0 15px 20px !important;
   }
   .title_img {
-  width: 70%;
+  width: 58%;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 }
 </style>
@@ -918,11 +918,6 @@ body {
   background-color: #0c0e14;
   overflow: hidden;
 }
-/* .title_img {
-  width: 70%;
-  height: auto;
-  margin:5px 0 15px;
-} */
 
 .music_content {
   display: flex;
