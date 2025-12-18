@@ -2,19 +2,18 @@
   <div id="app">
     <!-- 头部 -->
     <div class="wrapper">
-       <div class="logo">
-        <img class="music_img" src="@/assets/up-logo.png" alt="" />
+      <div class="logo">
+        <img class="music_img" src="@/assets/up-logo2.png" alt="" />
       </div>
-       <div class="user">
+      <div class="user">
         <img src="@/assets/avator.jpg" alt="" />
       </div>
-     
-       
-    
     </div>
-
     <!-- 主体卡片 -->
     <el-card class="box-card">
+      <div style="display: flex; justify-content: center">
+        <img class="title_img" src="@/assets/title-img.png" />
+      </div>
       <!-- 分类标签 -->
       <ul class="music_content">
         <li
@@ -27,7 +26,6 @@
           {{ item.name }}
         </li>
       </ul>
-
       <!-- 歌曲列表 -->
       <div class="music">
         <div class="music_list">
@@ -47,9 +45,13 @@
                 {{ song.name }}
               </div>
               <!-- 播放状态标识（gif动图） -->
-              <img v-if="currentPlayingId == song.id&&isPlaying" class="song-img" src="@/assets/music-playing.gif" alt="播放中" />
+              <img
+                v-if="currentPlayingId == song.id && isPlaying"
+                class="song-img"
+                src="@/assets/music-playing.gif"
+                alt="播放中"
+              />
             </div>
-
             <!-- 播放/暂停图标按钮 -->
             <img
               v-if="currentPlayingId === song.id && isPlaying"
@@ -84,16 +86,15 @@
       class="lyric-dialog"
       :append-to-body="true"
     >
-      <el-scrollbar ref="lyricScroll" style="height: 450px; width: 100%;">
+      <el-scrollbar ref="lyricScroll" style="height: 450px; width: 100%">
         <div class="lyrics-container">
-          <p 
+          <p
             v-for="(lyric, i) in currentPlayingSong?.lyrics || []"
             :key="i"
             :class="{ 'active-lyric': currentLyricIndex === i }"
             :ref="`lyric_${i}`"
           >
             {{ lyric.text }}
-           
           </p>
         </div>
       </el-scrollbar>
@@ -116,13 +117,13 @@ export default {
       activeTypeIndex: 0,
       // 音频路径（public/audio目录）+ 歌词路径
       songList: [
-           {
+        {
           id: 1,
           name: "ディスコネクトディスコ",
           audioUrl: "./audio/jp1.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp1.lrc"
+          lrcUrl: "./lrc/jp1.lrc",
         },
         {
           id: 2,
@@ -130,7 +131,7 @@ export default {
           audioUrl: "./audio/ch1.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch1.lrc"
+          lrcUrl: "./lrc/ch1.lrc",
         },
         {
           id: 3,
@@ -138,7 +139,7 @@ export default {
           audioUrl: "./audio/ch2.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch2.lrc"
+          lrcUrl: "./lrc/ch2.lrc",
         },
         {
           id: 4,
@@ -146,7 +147,7 @@ export default {
           audioUrl: "./audio/jp2.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp2.lrc"
+          lrcUrl: "./lrc/jp2.lrc",
         },
         {
           id: 5,
@@ -154,63 +155,63 @@ export default {
           audioUrl: "./audio/jp3.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp3.lrc"
+          lrcUrl: "./lrc/jp3.lrc",
         },
-         {
+        {
           id: 6,
           name: "达尔文",
           audioUrl: "./audio/ch3.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch3.lrc"
+          lrcUrl: "./lrc/ch3.lrc",
         },
-          {
+        {
           id: 7,
           name: "lovestepを踏みたいの",
           audioUrl: "./audio/jp4.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp4.lrc"
+          lrcUrl: "./lrc/jp4.lrc",
         },
-         {
+        {
           id: 8,
           name: "极昼",
           audioUrl: "./audio/ch4.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch4.lrc"
+          lrcUrl: "./lrc/ch4.lrc",
         },
-         {
+        {
           id: 9,
           name: "マジか",
           audioUrl: "./audio/jp5.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp5.lrc"
+          lrcUrl: "./lrc/jp5.lrc",
         },
-         {
+        {
           id: 10,
           name: "WINDSDAY",
           audioUrl: "./audio/jp6.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp6.lrc"
+          lrcUrl: "./lrc/jp6.lrc",
         },
-         {
+        {
           id: 11,
           name: "一切合切",
           audioUrl: "./audio/jp7.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp7.lrc"
+          lrcUrl: "./lrc/jp7.lrc",
         },
-         {
+        {
           id: 12,
           name: "红苹果",
           audioUrl: "./audio/ch5.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch5.lrc"
+          lrcUrl: "./lrc/ch5.lrc",
         },
         {
           id: 13,
@@ -218,7 +219,7 @@ export default {
           audioUrl: "./audio/ch6.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch6.lrc"
+          lrcUrl: "./lrc/ch6.lrc",
         },
         {
           id: 14,
@@ -226,23 +227,23 @@ export default {
           audioUrl: "./audio/jp8.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp8.lrc"
+          lrcUrl: "./lrc/jp8.lrc",
         },
-         {
+        {
           id: 15,
           name: "迁就",
           audioUrl: "./audio/ch7.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch7.lrc"
+          lrcUrl: "./lrc/ch7.lrc",
         },
-         {
+        {
           id: 16,
           name: "小城",
           audioUrl: "./audio/ch8.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch8.lrc"
+          lrcUrl: "./lrc/ch8.lrc",
         },
         {
           id: 17,
@@ -250,7 +251,7 @@ export default {
           audioUrl: "./audio/jp9.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp9.lrc"
+          lrcUrl: "./lrc/jp9.lrc",
         },
         {
           id: 18,
@@ -258,7 +259,7 @@ export default {
           audioUrl: "./audio/jp10.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp10.lrc"
+          lrcUrl: "./lrc/jp10.lrc",
         },
         {
           id: 19,
@@ -266,15 +267,15 @@ export default {
           audioUrl: "./audio/jp11.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp11.lrc"
+          lrcUrl: "./lrc/jp11.lrc",
         },
-         {
+        {
           id: 20,
           name: "天生一对",
           audioUrl: "./audio/ch9.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch9.lrc"
+          lrcUrl: "./lrc/ch9.lrc",
         },
         {
           id: 21,
@@ -282,130 +283,129 @@ export default {
           audioUrl: "./audio/jp12.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp12.lrc"
+          lrcUrl: "./lrc/jp12.lrc",
         },
-         {
+        {
           id: 22,
           name: "大师球",
           audioUrl: "./audio/ch10.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch10.lrc"
+          lrcUrl: "./lrc/ch10.lrc",
         },
-         {
+        {
           id: 23,
           name: "愿",
           audioUrl: "./audio/ch11.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch11.lrc"
+          lrcUrl: "./lrc/ch11.lrc",
         },
-         {
+        {
           id: 24,
           name: "Drops",
           audioUrl: "./audio/jp13.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp13.lrc"
+          lrcUrl: "./lrc/jp13.lrc",
         },
-         {
+        {
           id: 25,
           name: "ムーンライト",
           audioUrl: "./audio/jp14.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp14.lrc"
+          lrcUrl: "./lrc/jp14.lrc",
         },
-        
+
         {
           id: 26,
           name: "消炎",
           audioUrl: "./audio/ch12.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch12.lrc"
+          lrcUrl: "./lrc/ch12.lrc",
         },
-         {
+        {
           id: 27,
           name: "まつり",
           audioUrl: "./audio/jp15.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp15.lrc"
+          lrcUrl: "./lrc/jp15.lrc",
         },
-         {
+        {
           id: 28,
           name: "愛の賞味期限",
           audioUrl: "./audio/jp16.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp16.lrc"
+          lrcUrl: "./lrc/jp16.lrc",
         },
-         {
+        {
           id: 29,
           name: "Butter-fly",
           audioUrl: "./audio/jp17.mp3",
           lang: "jp",
           lyrics: [],
-          lrcUrl: "./lrc/jp17.lrc"
+          lrcUrl: "./lrc/jp17.lrc",
         },
-         {
+        {
           id: 30,
           name: "认真的雪",
           audioUrl: "./audio/ch13.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch13.lrc"
+          lrcUrl: "./lrc/ch13.lrc",
         },
-         {
+        {
           id: 31,
           name: "永不失联的爱",
           audioUrl: "./audio/ch14.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch14.lrc"
+          lrcUrl: "./lrc/ch14.lrc",
         },
-         {
+        {
           id: 32,
           name: "이 유",
           audioUrl: "./audio/kr1.mp3",
           lang: "kr",
           lyrics: [],
-          lrcUrl: "./lrc/kr1.lrc"
+          lrcUrl: "./lrc/kr1.lrc",
         },
-         {
+        {
           id: 33,
           name: "The Beginning",
           audioUrl: "./audio/en1.mp3",
           lang: "en",
           lyrics: [],
-          lrcUrl: "./lrc/en1.lrc"
+          lrcUrl: "./lrc/en1.lrc",
         },
-         {
+        {
           id: 34,
           name: "Seven(feat.Latto)",
           audioUrl: "./audio/en2.mp3",
           lang: "en",
           lyrics: [],
-          lrcUrl: "./lrc/en2.lrc"
+          lrcUrl: "./lrc/en2.lrc",
         },
-         {
+        {
           id: 35,
           name: "Betcha",
           audioUrl: "./audio/kr2.mp3",
           lang: "kr",
           lyrics: [],
-          lrcUrl: "./lrc/kr2.lrc"
+          lrcUrl: "./lrc/kr2.lrc",
         },
-         {
+        {
           id: 36,
           name: "爱在西元前",
           audioUrl: "./audio/ch15.mp3",
           lang: "ch",
           lyrics: [],
-          lrcUrl: "./lrc/ch15.lrc"
+          lrcUrl: "./lrc/ch15.lrc",
         },
-  
       ],
       currentPlayingId: null, // 当前播放歌曲ID
       currentPlayingSong: null, // 当前播放歌曲对象
@@ -418,7 +418,7 @@ export default {
       audio: null, // 纯JS创建的音频对象（不渲染到页面）
       audioErrorHandler: null, // 错误监听缓存
       currentLyricIndex: -1, // 当前高亮歌词索引
-      lyricDialogVisible: false // 歌词弹窗显示状态
+      lyricDialogVisible: false, // 歌词弹窗显示状态
     };
   },
   mounted() {
@@ -453,46 +453,47 @@ export default {
   },
   methods: {
     // 解析LRC歌词（过滤注释行，只保留时间戳行）
-// 解析LRC歌词（过滤注释行，只保留时间戳行）
-parseLrc(lrcText) {
-  if (!lrcText) return [];
-  // 1. 优化行过滤：trim后非空 + 匹配[MM:SS格式（不再限制00开头）
-  const lines = lrcText.split('\n')
-    .map(line => line.trim()) // 统一trim，避免换行/空格干扰
-    .filter(line => line && /^\[\d{2}:\d{2}/.test(line)); // 匹配[两位数字:两位数字开头
-  
-  // 2. 移除/g全局修饰符，避免lastIndex累积问题
-  const lrcRegex = /\[(\d{2}):(\d{2})\.(\d{2,3})\]\s*(.+)/;
-  const lyrics = [];
-  
-  lines.forEach(line => {
-    // 3. 每次匹配前重置正则lastIndex（双重保险，移除/g后可省略，但保留更健壮）
-    lrcRegex.lastIndex = 0;
-    const match = lrcRegex.exec(line);
-    if (match) {
-      const [, min, sec, ms, text] = match;
-      // 4. 时间计算优化：统一处理2/3位毫秒
-      const msNum = ms.length === 2 ? Number(ms) * 10 : Number(ms);
-      const time = Number(min) * 60 + Number(sec) + msNum / 1000;
-      // 5. 允许text含空格，仅过滤纯空
-      if (text.trim().length > 0) {
-        lyrics.push({ time, text: text.trim() });
-      }
-    }
-  });
-  console.log("解析后的完整歌词：", lyrics);
-  return lyrics;
-},
+    // 解析LRC歌词（过滤注释行，只保留时间戳行）
+    parseLrc(lrcText) {
+      if (!lrcText) return [];
+      // 1. 优化行过滤：trim后非空 + 匹配[MM:SS格式（不再限制00开头）
+      const lines = lrcText
+        .split("\n")
+        .map((line) => line.trim()) // 统一trim，避免换行/空格干扰
+        .filter((line) => line && /^\[\d{2}:\d{2}/.test(line)); // 匹配[两位数字:两位数字开头
+
+      // 2. 移除/g全局修饰符，避免lastIndex累积问题
+      const lrcRegex = /\[(\d{2}):(\d{2})\.(\d{2,3})\]\s*(.+)/;
+      const lyrics = [];
+
+      lines.forEach((line) => {
+        // 3. 每次匹配前重置正则lastIndex（双重保险，移除/g后可省略，但保留更健壮）
+        lrcRegex.lastIndex = 0;
+        const match = lrcRegex.exec(line);
+        if (match) {
+          const [, min, sec, ms, text] = match;
+          // 4. 时间计算优化：统一处理2/3位毫秒
+          const msNum = ms.length === 2 ? Number(ms) * 10 : Number(ms);
+          const time = Number(min) * 60 + Number(sec) + msNum / 1000;
+          // 5. 允许text含空格，仅过滤纯空
+          if (text.trim().length > 0) {
+            lyrics.push({ time, text: text.trim() });
+          }
+        }
+      });
+      console.log("解析后的完整歌词：", lyrics);
+      return lyrics;
+    },
     // 加载歌词文件
     loadLrc(song) {
       if (!song.lrcUrl) return Promise.resolve([]);
       return fetch(song.lrcUrl)
-        .then(res => {
+        .then((res) => {
           if (!res.ok) throw new Error(`歌词加载失败：${res.status}`);
           return res.text();
         })
-        .then(lrcText => this.parseLrc(lrcText))
-        .catch(err => {
+        .then((lrcText) => this.parseLrc(lrcText))
+        .catch((err) => {
           console.error(`加载${song.name}歌词失败：`, err);
           return [];
         });
@@ -538,8 +539,8 @@ parseLrc(lrcText) {
       this.currentLyricIndex = -1; // 重置歌词索引
 
       // 加载歌词并打开弹窗
-      this.loadLrc(song).then(lyrics => {
-        this.$set(this.currentPlayingSong, 'lyrics', lyrics);
+      this.loadLrc(song).then((lyrics) => {
+        this.$set(this.currentPlayingSong, "lyrics", lyrics);
         // 有歌词才打开弹窗
         this.lyricDialogVisible = lyrics.length > 0;
         console.log(`《${song.name}》歌词加载完成，数量：${lyrics.length}`);
@@ -551,7 +552,9 @@ parseLrc(lrcText) {
 
       // 绑定错误监听
       this.audioErrorHandler = (err) => {
-        this.$message.error(`音频播放失败：${song.name}（文件不存在或格式错误）`);
+        this.$message.error(
+          `音频播放失败：${song.name}（文件不存在或格式错误）`
+        );
         console.error("音频错误：", err);
         this.isPlaying = false;
       };
@@ -562,17 +565,27 @@ parseLrc(lrcText) {
         this.duration = this.audio.duration;
         // 播放（兼容浏览器自动播放策略）
         const playAudio = () => {
-          this.audio.play()
+          this.audio
+            .play()
             .then(() => {
               this.isPlaying = true;
-              this.playAllBtnText = this.playMode === "list" ? "一時停止リスト全て" : "プレイリスト全て";
-              console.log(`《${song.name}》开始播放，时长：${this.formatTime(this.duration)}`);
+              this.playAllBtnText =
+                this.playMode === "list"
+                  ? "一時停止リスト全て"
+                  : "プレイリスト全て";
+              console.log(
+                `《${song.name}》开始播放，时长：${this.formatTime(
+                  this.duration
+                )}`
+              );
             })
             .catch((err) => {
               // 自动播放失败时，提示用户手动点击（浏览器安全策略）
               if (err.name === "NotAllowedError") {
                 this.isPlaying = false;
-                this.$message.info(`《${song.name}》自动播放失败，请点击歌曲旁的播放图标手动播放`);
+                this.$message.info(
+                  `《${song.name}》自动播放失败，请点击歌曲旁的播放图标手动播放`
+                );
               } else {
                 this.$message.error(`播放失败：${err.message}`);
               }
@@ -587,7 +600,10 @@ parseLrc(lrcText) {
     toggleSinglePlay(song) {
       if (this.currentPlayingId !== song.id) {
         // 不是当前播放的歌曲，直接播放
-        this.playSong(song, this.filteredSongs.findIndex(item => item.id === song.id));
+        this.playSong(
+          song,
+          this.filteredSongs.findIndex((item) => item.id === song.id)
+        );
         return;
       }
 
@@ -595,55 +611,64 @@ parseLrc(lrcText) {
       if (this.isPlaying) {
         this.audio.pause();
         this.isPlaying = false;
-        this.playAllBtnText = this.playMode === "list" ? "プレイリスト全て" : "プレイリスト全て";
+        this.playAllBtnText =
+          this.playMode === "list" ? "プレイリスト全て" : "プレイリスト全て";
       } else {
-        this.audio.play()
+        this.audio
+          .play()
           .then(() => {
             this.isPlaying = true;
-            this.playAllBtnText = this.playMode === "list" ? "一時停止リスト全て" : "プレイリスト全て";
+            this.playAllBtnText =
+              this.playMode === "list"
+                ? "一時停止リスト全て"
+                : "プレイリスト全て";
           })
-          .catch(err => {
+          .catch((err) => {
             this.$message.error(`恢复播放失败：${err.message}`);
           });
       }
     },
     // 播放进度更新（核心：匹配歌词+滚动）
-  // 播放进度更新中，滚动逻辑优化（避免滚动偏移错误）
-handleTimeUpdate() {
-  if (!this.isPlaying || !this.currentPlayingSong) return;
-  
-  this.currentTime = this.audio.currentTime;
-  const lyrics = this.currentPlayingSong.lyrics || [];
-  if (lyrics.length === 0) return;
+    // 播放进度更新中，滚动逻辑优化（避免滚动偏移错误）
+    handleTimeUpdate() {
+      if (!this.isPlaying || !this.currentPlayingSong) return;
 
-  let currentIndex = -1;
-  const currentTime = this.currentTime;
-  // 优化歌词匹配逻辑：从后往前找，避免多匹配
-  for (let i = lyrics.length - 1; i >= 0; i--) {
-    if (currentTime >= lyrics[i].time - 0.1) { // 缩小偏差值，匹配更精准
-      currentIndex = i;
-      break;
-    }
-  }
+      this.currentTime = this.audio.currentTime;
+      const lyrics = this.currentPlayingSong.lyrics || [];
+      if (lyrics.length === 0) return;
 
-  if (currentIndex !== -1 && currentIndex !== this.currentLyricIndex) {
-    this.currentLyricIndex = currentIndex;
-    this.$nextTick(() => {
-      const lyricDom = this.$refs[`lyric_${currentIndex}`]?.[0];
-      const scrollContainer = this.$refs.lyricScroll?.wrap;
-      if (lyricDom && scrollContainer) {
-        // 滚动优化：使用scrollTop而非scrollTo，避免smooth导致的卡顿
-        const targetTop = lyricDom.offsetTop - (scrollContainer.clientHeight / 2) + (lyricDom.offsetHeight / 2);
-        scrollContainer.scrollTop = Math.max(0, targetTop);
+      let currentIndex = -1;
+      const currentTime = this.currentTime;
+      // 优化歌词匹配逻辑：从后往前找，避免多匹配
+      for (let i = lyrics.length - 1; i >= 0; i--) {
+        if (currentTime >= lyrics[i].time - 0.1) {
+          // 缩小偏差值，匹配更精准
+          currentIndex = i;
+          break;
+        }
       }
-    });
-  }
-},
+
+      if (currentIndex !== -1 && currentIndex !== this.currentLyricIndex) {
+        this.currentLyricIndex = currentIndex;
+        this.$nextTick(() => {
+          const lyricDom = this.$refs[`lyric_${currentIndex}`]?.[0];
+          const scrollContainer = this.$refs.lyricScroll?.wrap;
+          if (lyricDom && scrollContainer) {
+            // 滚动优化：使用scrollTop而非scrollTo，避免smooth导致的卡顿
+            const targetTop =
+              lyricDom.offsetTop -
+              scrollContainer.clientHeight / 2 +
+              lyricDom.offsetHeight / 2;
+            scrollContainer.scrollTop = Math.max(0, targetTop);
+          }
+        });
+      }
+    },
     // 播放结束处理（列表循环/单曲停止）
     handlePlayEnd() {
       this.isPlaying = false;
       const list = this.filteredSongs;
-      
+
       if (this.playMode === "list" && list.length > 0) {
         // 列表循环：播放下一首
         const nextIndex = (this.currentPlayIndex + 1) % list.length;
@@ -680,8 +705,12 @@ handleTimeUpdate() {
     // 格式化时间
     formatTime(time) {
       if (!time || isNaN(time)) return "00:00";
-      const min = Math.floor(time / 60).toString().padStart(2, "0");
-      const sec = Math.floor(time % 60).toString().padStart(2, "0");
+      const min = Math.floor(time / 60)
+        .toString()
+        .padStart(2, "0");
+      const sec = Math.floor(time % 60)
+        .toString()
+        .padStart(2, "0");
       return `${min}:${sec}`;
     },
   },
@@ -751,13 +780,12 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #1467ff transparent;
 }
-.lyric
-.lyric-dialog .el-dialog__wrapper {
-  background-color: rgba(0, 0, 0, 0.7) ;
+.lyric .lyric-dialog .el-dialog__wrapper {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .lyric-dialog .el-dialog {
-    max-width: 400px;
-    min-width: 300px;
+  max-width: 400px;
+  min-width: 300px;
   background-color: #0c0e14;
   border: 2px solid #1467ff;
   border-radius: 8px;
@@ -795,7 +823,6 @@ body {
   align-items: center;
 }
 .lyric-dialog .lyrics-container p {
-
   width: 90%;
   padding: 10px 0;
   font-size: 15px;
@@ -817,47 +844,54 @@ body {
 .lyric-dialog .el-dialog__body .el-scrollbar__wrap {
   background-color: #0c0e14;
   overflow: auto !important;
-  /* margin-right: -9px; */
-  /* padding-right: 9px; */
   /* 隐藏滚动条，但是页面可以滚动 */
-    /* 适配Firefox */
+  /* 适配Firefox */
   scrollbar-width: none;
   /* 适配IE/旧版Edge */
   -ms-overflow-style: none;
-    /* 火狐滚动条兼容 */
-  /* scrollbar-width: thin;
-  scrollbar-color: #1467ff transparent; */
 }
 /* 适配Chrome/Safari/新版Edge等WebKit内核浏览器 */
 .lyric-dialog .el-scrollbar__wrap::-webkit-scrollbar {
   display: none; /* 彻底隐藏滚动条 */
 }
-/* 歌词弹窗滚动条（核心优化：调细+位置+圆角） */
-/* .lyric-dialog .el-scrollbar__bar.is-vertical {
-  display: none;
-  width: 4px; 
-  right: 2px ;
-  opacity: 0.7; 
-  transition: opacity 0.2s ease;
-} */
-/* .lyric-dialog .el-scrollbar__bar.is-vertical:hover {
-  display: none;
-  opacity: 1;
+.lyric-dialog {
+  scrollbar-width: thin;
+  scrollbar-color: #1467ff;
 }
-.lyric-dialog .el-scrollbar__thumb {
-  display: none;
-  background-color: #1467ff ;
-  border-radius: 4px;
-    height: 4px !important; 
-} */
-.lyric-dialog{
-    scrollbar-width: thin;
-      scrollbar-color:#1467ff
-      
+/* ========== 核心：PC端默认宽度（优先级拉满） ========== */
+/* 直接命中el-card__body，且加!important确保不被覆盖 */
+.el-card__body {
+  padding: 0 20px 20px;
+  width: 50% !important; 
+  margin: 0 auto !important; /* PC端居中 */
+}
+.el-main {
+  padding: 0 20px 20px;
+  width: 50% !important;
+  margin: 0 auto !important;
+}
+.title_img {
+  width: 73%;
+  height: auto;
+  margin-bottom: 15px;
 }
 
-
-
+/* ========== 移动端覆盖（全局媒体查询，优先级最高） ========== */
+@media (max-width: 768px) {
+  .el-card__body {
+    width: 100% !important; /* 强制覆盖为100% */
+    padding: 0 20px 20px !important;
+  }
+  .el-main {
+    width: 100% !important;
+    padding: 0 15px 20px !important;
+  }
+  .title_img {
+  width: 70%;
+  height: auto;
+  margin-bottom: 15px;
+}
+}
 </style>
 
 <style scoped>
@@ -870,7 +904,7 @@ body {
 }
 
 .box-card {
-  padding-top: 120px;
+  padding-top: 70px;
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -884,6 +918,12 @@ body {
   background-color: #0c0e14;
   overflow: hidden;
 }
+/* .title_img {
+  width: 70%;
+  height: auto;
+  margin:5px 0 15px;
+} */
+
 .music_content {
   display: flex;
   gap: 5px;
@@ -905,8 +945,8 @@ body {
   cursor: pointer;
 }
 .music_name.active {
-  color: rgb(32, 175, 231);
-  /* color: #1467ff; */
+  /* color: rgb(32, 175, 231); */
+  color: #409eff;
   font-weight: 600;
 }
 
@@ -921,22 +961,20 @@ body {
   background-color: rgba(23, 25, 34, 0.2);
 }
 .logo {
-  /* margin-left: 30px; */
-      display: flex;
-    align-items: center;
-  width: 50px;
-  height: 50px;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  height: auto;
 }
 .user {
-  /* margin-right: 30px; */
-  width: 50px;
-  height: 50px;
+  width: 62px;
+  height: auto;
   border-radius: 50%;
   overflow: hidden;
   /* 核心：圆形渐变边框 */
   border: 2px solid transparent;
-  background:linear-gradient(135deg, #1467ff, #b0a4e6, #9610f5) border-box,
-            #fff padding-box
+  background: linear-gradient(135deg, #1467ff, #c4bfe6, #9610f5) border-box,
+    #fff padding-box;
 }
 .user img {
   width: 100%;
@@ -977,10 +1015,6 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* 播放中歌曲名变色 */
-/* .song-item.active .song-name {
-  color: rgb(32, 175, 231);
-} */
 
 /* 播放图标 */
 .play-icon {
@@ -994,7 +1028,8 @@ body {
   color: #fff;
 }
 .song-name:hover {
-  color: rgb(32, 175, 231);
+  /* color: rgb(32, 175, 231); */
+  color: #409eff;
 }
 
 /* 播放列表按钮 */
@@ -1028,7 +1063,7 @@ body {
   background-image: url("~@/assets/live_bottom_frame.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 83%;
+  height: 80%;
   background-color: transparent;
 }
 .music_list {
@@ -1049,9 +1084,9 @@ body {
   border-radius: 4px;
 }
 .music_list::-webkit-scrollbar-thumb {
-  background:  rgb(55, 85, 104);
+  background: rgb(55, 85, 104);
   border-radius: 4px;
-    opacity: 0.7;
+  opacity: 0.7;
   transition: opacity 0.2s ease, background 0.2s ease;
 }
 .music_list::-webkit-scrollbar-thumb:hover {
@@ -1069,6 +1104,7 @@ body {
   .box-card {
     max-width: 100% !important;
   }
+
   .el-row {
     margin: 5px 0 !important;
   }
@@ -1089,4 +1125,5 @@ body {
     font-size: 16px;
   }
 }
+
 </style>
