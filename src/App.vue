@@ -3,7 +3,7 @@
     <!-- 头部 -->
     <div class="wrapper">
       <div class="logo">
-        <img class="music_img" src="@/assets/up-logo2.png" alt="" />
+        <img class="music_img" src="@/assets/up-logo1.png" alt="" />
       </div>
       <div class="user">
         <img src="@/assets/avator.jpg" alt="" />
