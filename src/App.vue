@@ -862,16 +862,16 @@ body {
 /* 直接命中el-card__body，且加!important确保不被覆盖 */
 .el-card__body {
   padding: 0 20px 20px;
-  width: 50% !important; 
-  margin: 0 auto !important; /* PC端居中 */
+  width: 35% !important; 
+  margin: 0 auto 20px !important; /* PC端居中 */
 }
 .el-main {
   padding: 0 20px 20px;
-  width: 50% !important;
-  margin: 0 auto !important;
+  width: 35% !important;
+  margin: 0 auto 20px !important;
 }
 .title_img {
-  width: 58%;
+  width: 53%;
   height: auto;
   margin-bottom: 20px;
 }
@@ -887,7 +887,7 @@ body {
     padding: 0 15px 20px !important;
   }
   .title_img {
-  width: 58%;
+  width: 53%;
   height: auto;
   margin-bottom: 20px;
 }
@@ -907,8 +907,9 @@ body {
   padding-top: 70px;
   display: flex;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
+  min-height: 680px;
   border: 0;
   background-image: url("~@/assets/mian-bg-top.png"),
     url("~@/assets/mian-bg-bottom.png");
@@ -916,7 +917,6 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #0c0e14;
-  overflow: hidden;
 }
 
 .music_content {
@@ -930,7 +930,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 60px;
+  /* min-width: 60px; */
   width: 20%;
   height: 40px;
   font-family: Source Han Sans CN;
