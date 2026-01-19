@@ -406,6 +406,22 @@ export default {
           lyrics: [],
           lrcUrl: "./lrc/ch15.lrc",
         },
+         {
+          id: 37,
+          name: "Butter-fly二创半混音",
+          audioUrl: "./audio/halfMixed.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "",
+        },
+         {
+          id: 38,
+          name: "Butter-fly二创全混音",
+          audioUrl: "./audio/fullyMixed.mp3",
+          lang: "jp",
+          lyrics: [],
+          lrcUrl: "",
+        },
       ],
       currentPlayingId: null, // 当前播放歌曲ID
       currentPlayingSong: null, // 当前播放歌曲对象
